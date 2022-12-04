@@ -1,12 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Events from "./Components/Events/Events";
+import Complex_parctice from "./Components/Complex_state/Complex_parctice";
+// import Events from "./Components/Events/Events";
 // import Timer from "./Components/Timer";
 import "./index.css";
 // import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 // import Strike from "./Components/Strike";
 // import Count from "./Components/Count";
+// import Complex from "./Components/Complex_state/Complex";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,7 +17,9 @@ root.render(
     {/* <Strike/> */}
     {/* <Count/> */}
    {/* <Timer/> */}
-   <Events/>
+   {/* <Events/> */}
+   {/* <Complex/> */}
+   <Complex_parctice/>
   </React.StrictMode>
 );
 
