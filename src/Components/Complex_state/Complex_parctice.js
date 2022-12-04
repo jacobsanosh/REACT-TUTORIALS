@@ -3,8 +3,8 @@ import React, { useState } from 'react'
 
 function Complex_parctice() {
     const [data, setdata] = useState({
-        fname:"",
-        lname:"",
+        fName:"",
+        lName:"",
         email:""
     })
     //for setting data from input field
@@ -14,29 +14,35 @@ function Complex_parctice() {
         // console.log(name,value)
         setdata((prev)=>{
             console.log(prev)
-            if(name==='fName')
-            {
-                return{
-                    fname:value,
-                    lname:prev.lname,
-                    email:prev.email
-                }
-            }
-            else if(name==='lName')
-            {
-                return{
-                    fname:prev.fname,
-                    lname:value,
-                    email:prev.email
-                }
-            }
-            else
-            {
-                return{
-                    fname:prev.fname,
-                    lname:prev.lname,
-                    email:value
-                }
+            // if(name==='fName')
+            // {
+            //     return{
+            //         fname:value,
+            //         lname:prev.lname,
+            //         email:prev.email
+            //     }
+            // }
+            // else if(name==='lName')
+            // {
+            //     return{
+            //         fname:prev.fname,
+            //         lname:value,
+            //         email:prev.email
+            //     }
+            // }
+            // else
+            // {
+            //     return{
+            //         fname:prev.fname,
+            //         lname:prev.lname,
+            //         email:value
+            //     }
+            // }
+
+            //using spread operator
+            return{
+                ...prev,
+                [name]:value
             }
         })
     }
@@ -44,7 +50,7 @@ function Complex_parctice() {
     <div>
       <div className="container">
         <h1>
-          Hello {data.fname} {data.lname}
+          Hello {data.fName} {data.lName}
         </h1>
         <p>{data.email}</p>
         <form>
