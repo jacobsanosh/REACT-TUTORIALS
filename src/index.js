@@ -9,7 +9,7 @@ import reportWebVitals from "./reportWebVitals";
 // import Strike from "./Components/Strike";
 // import Count from "./Components/Count";
 // import Complex from "./Components/Complex_state/Complex";
-
+import Todo from './Components/todo/Todo'
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -19,7 +19,8 @@ root.render(
    {/* <Timer/> */}
    {/* <Events/> */}
    {/* <Complex/> */}
-   <Complex_parctice/>
+   {/* <Complex_parctice/> */}
+   <Todo/>
   </React.StrictMode>
 );
 
