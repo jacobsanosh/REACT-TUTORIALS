@@ -1,22 +1,19 @@
 import React, { useState } from 'react'
 import './Todo.css'
 import Todoitems from './Components/Todoitems'
+import Inputarea from './Components/Inputarea'
 function Todo() {
-   const [text, setText] = useState("")
+
    const [array, setArray] = useState([])
-    const addItem=()=>{
+    const addItem=(nextitem)=>{
       console.log("adding items")
       setArray((prev)=>{
-        return [...prev,text]
+        return [...prev,nextitem]
       })
-      console.log(array)
-      setText("")
+      // setText("")
     }
     
-    const callOnchange=(event)=>{
-      setText(event.target.value)
-      // console.log(text)
-    }
+   
 
     const deleteItem=(itemId)=>{
       console.log("on clicked delete item",itemId)
@@ -35,15 +32,7 @@ function Todo() {
    
   return (
     <div className="container">
-    <div className="heading">
-      <h1>To-Do List</h1>
-    </div>
-    <div className="form">
-      <input type="text" onChange={callOnchange} value={text}/>
-      <button onClick={addItem}>
-        <span>Add</span>
-      </button>
-    </div>
+    <Inputarea adddata={addItem}/>
     <div>
       <ul>
         {array.map((items,index)=>{
